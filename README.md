@@ -11,7 +11,8 @@ A sleek React application showcasing a collection of cars with details, images, 
 - Responsive and modern design with smooth animations.
 
 ## Demo
-![image](https://github.com/user-attachments/assets/85b260ad-c03e-489a-a739-28ca0255fe4f)
+![image](https://github.com/user-attachments/assets/82fe8769-515d-4d70-b57c-93b33f54f1d6)
+
 
 
 
