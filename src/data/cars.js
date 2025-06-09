@@ -1,13 +1,13 @@
 const cars = [
   {
-    id: 1,
-    name: "Tesla Model S",
-    description: "An all-electric five-door liftback sedan produced by Tesla, Inc.",
-    engine: "Electric Dual Motor",
-    horsepower: 670,
-    torque: "850 Nm",
-    topSpeed: "200 mph",
-    zeroToSixty: "1.99 sec",
+   id: 1,
+  name: "Audi R8",
+  description: "A high-performance sports car with a naturally aspirated V10 engine and sleek design.",
+  engine: "5.2L V10",
+  horsepower: 602,
+  torque: "560 Nm",
+  topSpeed: "205 mph",
+  zeroToSixty: "3.2 sec",
     image:"public/car.png" ,
     sound: "https://www.fesliyanstudios.com/play-mp3/387" // Tesla-like electric hum
   },
