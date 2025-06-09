@@ -1,124 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-/* App Container */
-.App {
-  @apply flex flex-col items-center justify-start min-h-screen w-full px-6 py-20 md:px-10 relative;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-.Head {
-  @apply text-6xl md:text-7xl font-bold uppercase tracking-widest mb-12 text-center;
-  color: #00ccff;
-  text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
-  animation: textPulse 2s ease-in-out infinite alternate;
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes textPulse {
-  from { text-shadow: 0 0 10px rgba(0, 204, 255, 0.5); }
-  to { text-shadow: 0 0 25px rgba(0, 204, 255, 1); }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
 
-/* Modern Hero Card */
-.hero-section {
-  @apply flex flex-col md:flex-row items-center gap-10 bg-neutral-900 rounded-3xl p-10 w-full max-w-screen-xl shadow-2xl border border-cyan-500/20;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-.hero-content {
-  @apply flex-1 space-y-6 text-white;
+.logo span {
+  color: #3f84e5;
 }
 
-.hero-content h2 {
-  @apply text-4xl md:text-5xl font-bold text-cyan-400 uppercase tracking-wide;
+.language {
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
-.hero-content p {
-  @apply text-lg text-gray-300;
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.hero-content ul {
-  @apply mt-4 space-y-2 border-t border-gray-700 pt-4;
+.hero.animate .hero-text {
+  animation: slideInLeft 0.8s ease;
 }
 
-.hero-content li {
-  @apply flex justify-between text-sm text-gray-400 hover:text-white;
+.hero.animate .hero-image {
+  animation: slideInRight 0.8s ease;
 }
 
-.hero-content li strong {
-  @apply text-cyan-400;
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.details-button {
-  @apply bg-cyan-500 text-white py-3 px-6 rounded-full font-semibold text-sm tracking-widest transition-all duration-300 relative overflow-hidden shadow-lg;
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.details-button:hover {
-  @apply bg-cyan-600 scale-105 shadow-xl;
+.hero-text {
+  max-width: 45%;
+  z-index: 2;
 }
 
-.details-button::before {
-  content: '';
-  @apply absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12;
-  transition: left 0.5s ease;
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.details-button:hover::before {
-  left: 100%;
+.hero-text .description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
-.hero-image-container {
-  @apply flex-1 flex items-center justify-center relative bg-black/10 rounded-xl overflow-hidden min-h-[400px] p-6;
+.hero-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
-.car-image {
-  @apply w-full max-w-[90%] transform transition-transform duration-500 ease-in-out rounded-lg shadow-xl;
-  animation: carReveal 1s ease-out forwards;
+.hero-text li {
+  margin: 8px 0;
+  font-size: 1rem;
 }
 
-@keyframes carReveal {
-  from { transform: scale(0.8) rotateY(-15deg); opacity: 0; }
-  to { transform: scale(1.05) rotateY(0); opacity: 1; }
+.cta-button {
+  background-color: #3f84e5;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.hero-section:hover .car-image {
-  @apply scale-110;
+.cta-button:hover {
+  background-color: #ff0000;
 }
 
-.navigation-arrows {
-  @apply flex gap-6 mt-8;
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.arrow-button {
-  @apply w-14 h-14 bg-cyan-500 text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 border border-cyan-500 shadow-md;
+.stat h3 {
+  font-size: 1.5rem;
+  color: #e4e4e4;
+  margin-bottom: 5px;
 }
 
-.arrow-button:hover {
-  @apply bg-cyan-600 scale-110 rotate-3 shadow-xl border-cyan-400;
+.stat p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
-/* Footer */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  padding-left: 40px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 3000px; /* Bigger image */
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 0 80px rgba(63, 132, 229, 0.3);
+  transition: transform 0.4s ease;
+}
+
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.controls button {
+  background-color: #1e1e1e;
+  border: 1px solid #3f84e5;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #3f84e5;
+}
+
 .footer {
-  @apply fixed bottom-0 w-full bg-neutral-900 text-center py-4 text-gray-300 shadow-inner;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  background-color: #111;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-section {
-    @apply flex-col p-6;
-  }
-
-  .hero-content h2 {
-    @apply text-3xl;
-  }
-
-  .hero-content p {
-    @apply text-base;
-  }
-
-  .details-button {
-    @apply py-2 px-4 text-xs;
-  }
-
-  .arrow-button {
-    @apply w-12 h-12 text-xl;
-  }
-}
-  

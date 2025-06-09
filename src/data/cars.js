@@ -8,7 +8,7 @@ const cars = [
     torque: "850 Nm",
     topSpeed: "200 mph",
     zeroToSixty: "1.99 sec",
-    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+    image:"public/car.png" ,
     sound: "https://www.fesliyanstudios.com/play-mp3/387" // Tesla-like electric hum
   },
   {
@@ -20,7 +20,7 @@ const cars = [
     torque: "556 Nm",
     topSpeed: "155 mph",
     zeroToSixty: "4.2 sec",
-    image: "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=800&q=80",
+    image: "  https://i.pinimg.com/originals/6f/ff/6d/6fff6db37aa5ac766052ea128010843a.png",
     sound: "https://www.fesliyanstudios.com/play-mp3/6783" // Muscle car engine sound
   },
   {
